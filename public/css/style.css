@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: black;
+}
+
+/*.lab a {*/
+/*  padding-bottom: 1%;*/
+/*}*/
+
+a{
+  padding-bottom: 1em;
+  line-height: 1.5;
+  display:inline-block;
+}
+ a:hover {
+   color: red;
+ }
