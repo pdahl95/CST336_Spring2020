@@ -1,0 +1,110 @@
+body{
+    background-color:white;
+    color: gray;
+}
+h1 {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 60px;
+}
+p {
+    size: 42px;
+}
+header, main, nav, footer {
+    text-align: center;
+}
+nav a { /* links within "nav" container */
+    padding: 15px;
+    padding-bottom:4px;
+    font-size:1.8em;
+    text-decoration:none; /* removes underline*/
+    color: gray; /* by default, links are blue*/
+}
+
+nav a:hover{
+    border-bottom: 2px #003366 solid;
+    font-size: 2em;
+    transition: .9s;
+}
+a.on{
+    color: white;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 6px;
+}
+figure {
+    display: inline;
+}
+
+#welcomeText {
+    display:inline-block;
+    padding-right: 50px;
+    text-align: center;
+    position:relative;
+    top:-150px;
+    
+}
+footer {
+    clear: left;
+    padding:0;
+    width:90vw;
+    height:22.5vh;
+    float:right;
+    overflow:auto;
+    color: #003366;
+    font-size: 11px;
+    position: relative;
+    text-align: center;
+}
+.csumb {
+    width:7vw;
+    height:10vh;
+    margin: auto;
+}
+table{
+    margin: 0px auto;
+}
+td{
+    padding-right: 10px;
+    font-size: 1.3em;
+    text-align: center;
+    color: white;
+}
+td b {
+    color: #003366;
+}
+#table-header {
+    background-color: white;
+    
+}
+.table-row{
+    background-color: #76ABDF;
+}
+ul {
+    text-align:left;
+    padding-left:200px;
+}
+.hobby{
+    color:#003366;
+    font-size:16px;
+    
+}
+#hobby{
+    display: inline;
+}
+hr{
+    width: 950px;
+}
+iframe{
+    width:640px; 
+    height:1010px;
+}
+#googleform{
+    text-align:center;
+}
+img{
+    width:400px;
+    height: 450px;
+    margin-left: 260px;
+    border-radius: 25px;
+}

@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 220px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.title{
+  color: white;
+  background-color: #002a4e;
+  margin-left:-30px;
+  margin-right: -30px;
+  
+}
+.textTitle{
+  padding: 15px;
+  font-weight: normal;
+}
+
+body{
+  padding: 20px;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height:1.6;
+}
+
+a {
+  color: #002a4e;
+}
+.column img{
+  width: 100%;
+}
+header{
+  height: 120px;
+  margin-top: -30px;
+}
