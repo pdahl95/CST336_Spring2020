@@ -1,34 +1,35 @@
-// JavaScript File
-var express = require('express')
-  , partials = require('express-partials')
-  , app = express();
-
-app.engine('html', require("ejs").renderFile);
+const express = require("express");
+const app = express();
+app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
-app.use(partials());
 
-// routes 
-app.get('/',function(req,res,next){
-  res.render('index.ejs') 
-  // -> render layout.ejs with index.ejs as `body`.
-})
+//routes
+app.get("/", function(req,res){
+    //res.send("It works!");
+    res.render("index.html");
+});
 
+app.get("/mercury", function(req,res){
+    //res.send("This will be Mercury web page!");
+    res.render("mercury.html");
+});
 
-// app.get("/", function(req, res){
-//   res.render("index.html"); 
-// });
-// app.get("/mercury", function(req,res){
-//     res.render("mercury.html");
-// });
-// app.get("/venus", function(req,res){
-//     res.render("venus.html");
-// });
-// app.get("/pluto", function(req,res){
-//     res.render("pluto.html");
-// });
+app.get("/venus", function(req,res){
+    //res.send("This will be Venus web page!");
+    res.render("venus.html");
+});
 
+app.get("/earth", function(req,res){
+    //res.send("This will be Venus web page!");
+    res.render("earth.html");
+});
 
-// server listner 
+app.get("*", function(req,res){
+    //res.send("Page Not Found");
+    res.render("error.html");
+});
+
+//server listener
 app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("Express server is running...");
+    console.log("Express Server is Running");
 });
