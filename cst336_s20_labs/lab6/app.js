@@ -7,17 +7,17 @@ app.use(express.static("public"));
 
 // routes 
 app.get("/", function(req, res){
-   res.render("index.html"); 
+   res.render("index.ejs"); 
     
 });
 app.get("/mercury", function(req,res){
-    res.render("mercury.html");
+    res.render("mercury.ejs");
 });
 app.get("/venus", function(req,res){
-    res.render("venus.html");
+    res.render("venus.ejs");
 });
 app.get("/pluto", function(req,res){
-    res.render("pluto.html");
+    res.render("pluto.ejs");
 });
 
 
