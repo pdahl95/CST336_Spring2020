@@ -49,11 +49,12 @@ $(document).ready(function() {
             });
         }
     }
+    
 
     function addListOfCounties() {
         $.ajax({
             type: "GET",
-            url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
+            url: "https://itcdland.csumb.edu/~milara/ajax/countyList.php?state=CA",
             dataType: "json",
             data: {
                 "state": $("#state").val()
