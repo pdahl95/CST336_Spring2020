@@ -1,23 +1,23 @@
 // JavaScript File
 const express = require("express");
 const app = express();
-// app.engine('html', require("ejs").renderFile);
-app.engine('html', require('ejs-locals'));
+app.engine('html', require("ejs").renderFile);
+// app.engine('html', require('ejs-locals'));
 app.use(express.static("public"));
 
 // routes 
 app.get("/", function(req, res){
-   res.render("index.ejs"); 
+   res.render("index.html"); 
     
 });
 app.get("/mercury", function(req,res){
-    res.render("mercury.ejs");
+    res.render("mercury.html");
 });
 app.get("/venus", function(req,res){
-    res.render("venus.ejs");
+    res.render("venus.html");
 });
 app.get("/pluto", function(req,res){
-    res.render("pluto.ejs");
+    res.render("pluto.html");
 });
 
 
