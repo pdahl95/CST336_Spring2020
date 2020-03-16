@@ -1,8 +1,10 @@
 // JavaScript File
-const express = require("express");
+const express = require("express"),
+engine = require('ejs-locals')
 const app = express();
+
 app.engine('html', require("ejs").renderFile);
-// app.engine('html', require('ejs-locals'));
+app.engine('ejs', engine);
 app.use(express.static("public"));
 
 // routes 
