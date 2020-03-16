@@ -1,26 +1,31 @@
 // JavaScript File
-const express = require("express"),
-engine = require('ejs-locals')
-const app = express();
+var express = require('express')
+  , partials = require('express-partials')
+  , app = express();
 
 app.engine('html', require("ejs").renderFile);
-app.engine('ejs', engine);
 app.use(express.static("public"));
+app.use(partials());
 
 // routes 
-app.get("/", function(req, res){
-   res.render("index.html"); 
-    
-});
-app.get("/mercury", function(req,res){
-    res.render("mercury.html");
-});
-app.get("/venus", function(req,res){
-    res.render("venus.html");
-});
-app.get("/pluto", function(req,res){
-    res.render("pluto.html");
-});
+app.get('/',function(req,res,next){
+  res.render('index.ejs') 
+  // -> render layout.ejs with index.ejs as `body`.
+})
+
+
+// app.get("/", function(req, res){
+//   res.render("index.html"); 
+// });
+// app.get("/mercury", function(req,res){
+//     res.render("mercury.html");
+// });
+// app.get("/venus", function(req,res){
+//     res.render("venus.html");
+// });
+// app.get("/pluto", function(req,res){
+//     res.render("pluto.html");
+// });
 
 
 // server listner 
