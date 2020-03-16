@@ -3,6 +3,9 @@ const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
 
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
 //routes
 app.get("/", function(req,res){
     //res.send("It works!");
@@ -19,15 +22,12 @@ app.get("/venus", function(req,res){
     res.render("venus.html");
 });
 
-app.get("/earth", function(req,res){
+app.get("/pluto", function(req,res){
     //res.send("This will be Venus web page!");
-    res.render("earth.html");
+    res.render("pluto.html");
 });
 
-app.get("*", function(req,res){
-    //res.send("Page Not Found");
-    res.render("error.html");
-});
+
 
 //server listener
 app.listen(process.env.PORT, process.env.IP, function(){
